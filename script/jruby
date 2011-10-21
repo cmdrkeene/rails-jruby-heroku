@@ -80,8 +80,7 @@ then
   REPO="/app/target"
 fi
 
-REPO="/app/target"
-CLASSPATH=$CLASSPATH_PREFIX:"$REPO"/etc:"$REPO"/org/jruby/jruby-complete/1.6.3/jruby-complete-1.6.3.jar
+CLASSPATH="/app/target/jruby-heroku-1.0.jar"
 EXTRA_JVM_ARGUMENTS=""
 
 echo "Classpath is: $CLASSPATH"
