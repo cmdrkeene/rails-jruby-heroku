@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-PhoneNumber::Application.load_tasks
+HerokuJRuby::Application.load_tasks
