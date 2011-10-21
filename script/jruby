@@ -82,7 +82,8 @@ fi
 
 if [ -z "$REPO" ]
 then
-  REPO="$BASEDIR"/.m2/repository
+  # REPO="$BASEDIR"/.m2/repository
+  REPO="/app/target"
 fi
 
 
