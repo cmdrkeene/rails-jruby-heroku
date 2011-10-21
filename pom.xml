@@ -10,11 +10,13 @@
 				<groupId>org.jruby</groupId>
 				<artifactId>jruby-complete</artifactId>
 				<version>1.6.3</version>
+				<scope>compile</scope>
 		</dependency>
 		<dependency>
 				<groupId>org.jruby.plugins</groupId>
 				<artifactId>jruby-rake-plugin</artifactId>
 				<version>1.6.3</version>
+				<scope>compile</scope>
 		</dependency>
   </dependencies>
 	<build>
