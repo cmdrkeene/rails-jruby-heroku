@@ -1,9 +1,9 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.groupme</groupId>
+  <groupId>au.com.mathew</groupId>
   <artifactId>jruby-heroku</artifactId>
 	<version>1.0</version>
-	<name>phone_number</name>
+	<name>webapp</name>
 	<packaging>jar</packaging>
   <dependencies>
 		<dependency>

@@ -97,6 +97,13 @@ export GEM_PATH=$GEM_HOME
 export PATH="$GEM_PATH"/bin:$PATH
 export BUNDLE_GEMFILE="$APPDIR"/Jemfile
 
+# Test if Heroku's environment variables are set.
+# If they are, we're running on Heroku and should 
+# set our RAILS_ENV to production
+if [ -n "${DATABASE_URL}" ] && [ -n ${PORT} ] && [ "${APPDIR}" = "/app" ]; then
+	echo "Detected that we are running on Heroku. Setting RAILS_ENV=production"
+	export RAILS_ENV=production
+fi
 
 exec "$JAVACMD" $JAVA_OPTS \
   $EXTRA_JVM_ARGUMENTS \
