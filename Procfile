@@ -1,4 +1,4 @@
-web:			sh target/bin/webapp
-console:	sh script/jruby script/rails console
-rake:			sh script/jruby -S rake
-jruby:		sh script/jruby
+web:			sh target/bin/jruby -S trinidad -p $PORT
+console:	sh target/bin/jruby script/rails console
+rake:			sh target/bin/jruby -S rake
+jruby:		sh target/bin/jruby
