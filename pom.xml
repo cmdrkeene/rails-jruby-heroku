@@ -51,7 +51,7 @@
  							<goal>jruby</goal>
  						</goals>
  						<configuration>
- 						 <args>-S gem install bundler --no-ri --no-rdoc --install-dir .gems</args>
+ 						 <args>-S gem install bundler --no-ri --no-rdoc</args>
  						</configuration>
  					</execution>
  					<execution>
