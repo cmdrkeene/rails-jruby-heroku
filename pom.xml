@@ -39,6 +39,35 @@
                </execution>
            </executions>
        </plugin>
+       <plugin>
+ 				<groupId>org.jruby.plugins</groupId>
+ 				<artifactId>jruby-rake-plugin</artifactId>
+ 				<version>1.6.3</version>
+ 				<executions>
+ 					<execution>
+ 						<id>install-bundler</id>
+ 						<phase>process-resources</phase>
+ 						<goals>
+ 							<goal>jruby</goal>
+ 						</goals>
+ 						<configuration>
+ 						 <args>-S gem install bundler --no-ri --no-rdoc --install-dir .gems</args>
+ 						</configuration>
+ 					</execution>
+ 					<execution>
+ 						<id>bundle-install</id>
+ 						<phase>process-resources</phase>
+ 						<goals>
+ 							<goal>jruby</goal>
+ 						</goals>
+ 						<configuration>
+ 							<args>
+ 								-S bundle install --gemfile=Jemfile --path=.gems
+ 							</args>
+ 						</configuration>
+ 					</execution>
+ 				 </executions>
+ 			 </plugin>
 		</plugins>
   </build>
 </project>
