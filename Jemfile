@@ -4,7 +4,7 @@ gem "rails", "3.1.1"
 gem "json"
 gem "activerecord-jdbcpostgresql-adapter"
 gem "jdbc-postgres"
-gem "trinidad"
+# gem "trinidad"
 # gem "jruby-openssl" fails with 2011-10-21T18:35:45+00:00 app[web.1]: Could not find bouncy-castle-java-1.5.0146.1 in any of the sources
 
 group :development, :test do

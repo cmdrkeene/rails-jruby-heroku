@@ -53,7 +53,6 @@ GEM
     i18n (0.6.0)
     jdbc-postgres (9.0.801)
     jdbc-sqlite3 (3.7.2)
-    jruby-rack (1.0.10)
     json (1.6.1-java)
     launchy (2.0.5)
       addressable (~> 2.2.6)
@@ -117,10 +116,6 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    trinidad (1.2.3)
-      jruby-rack (>= 1.0.9)
-      trinidad_jars (>= 1.0.1)
-    trinidad_jars (1.0.1)
     tzinfo (0.3.30)
 
 PLATFORMS
@@ -135,4 +130,3 @@ DEPENDENCIES
   json
   rails (= 3.1.1)
   rspec-rails (>= 2.0.1)
-  trinidad
