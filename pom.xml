@@ -19,38 +19,11 @@
   </dependencies>
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.jruby.plugins</groupId>
-				<artifactId>jruby-rake-plugin</artifactId>
-				<version>1.6.3</version>
-				<executions>
-					<execution>
-						<id>bundle-install</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>jruby</goal>
-						</goals>
-						<configuration>
-							<args>
-								-e ENV['GEM_HOME']=File.join(Dir.pwd,'.gems');ENV['GEM_PATH']=File.join(Dir.pwd,'.gems');ENV['BUNDLE_GEMFILE']=File.join(Dir.pwd,'Jemfile');require'rubygems';require'bundler';require'bundler/cli';cli=Bundler::CLI.new;cli.install
-							</args>
-						</configuration>
-					</execution>
-				 </executions>
-			 </plugin>
 			 <plugin>
            <groupId>org.codehaus.mojo</groupId>
            <artifactId>appassembler-maven-plugin</artifactId>
            <version>1.1.1</version>
            <executions>
-               <execution>
-     						 <id>install-bundler</id>
-     						 <phase>process-resources</phase>
-     						 <goals><goal>assemble</goal></goals>
-     						 <configuration>
-     						   <args>-S gem install bundler --no-ri --no-rdoc --install-dir .gems</args>
-     						 </configuration>
-     					 </execution>   					
                <execution>
                    <phase>package</phase>
                    <goals><goal>assemble</goal></goals>
@@ -66,6 +39,35 @@
                </execution>
            </executions>
        </plugin>
+       <plugin>
+ 				<groupId>org.jruby.plugins</groupId>
+ 				<artifactId>jruby-rake-plugin</artifactId>
+ 				<version>1.6.3</version>
+ 				<executions>
+ 					<execution>
+ 						<id>install-bundler</id>
+ 						<phase>process-resources</phase>
+ 						<goals>
+ 							<goal>jruby</goal>
+ 						</goals>
+ 						<configuration>
+ 						 <args>-S gem install bundler --no-ri --no-rdoc --install-dir .gems</args>
+ 						</configuration>
+ 					</execution>
+ 					<execution>
+ 						<id>bundle-install</id>
+ 						<phase>process-resources</phase>
+ 						<goals>
+ 							<goal>jruby</goal>
+ 						</goals>
+ 						<configuration>
+ 							<args>
+ 								-e ENV['GEM_HOME']=File.join(Dir.pwd,'.gems');ENV['GEM_PATH']=File.join(Dir.pwd,'.gems');ENV['BUNDLE_GEMFILE']=File.join(Dir.pwd,'Jemfile');require'rubygems';require'bundler';require'bundler/cli';cli=Bundler::CLI.new;cli.install
+ 							</args>
+ 						</configuration>
+ 					</execution>
+ 				 </executions>
+ 			 </plugin>
 		</plugins>
   </build>
 </project>
