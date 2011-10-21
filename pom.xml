@@ -61,7 +61,7 @@
                        <programs>
                            <program>
                                <mainClass>org.jruby.Main</mainClass>
-                               <name>jruby</name>
+                               <name>webapp</name>
                            </program>
                        </programs>
                    </configuration>
