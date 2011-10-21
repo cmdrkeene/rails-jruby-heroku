@@ -5,6 +5,7 @@ gem "json"
 gem "activerecord-jdbcpostgresql-adapter"
 gem "jdbc-postgres"
 gem "trinidad"
+gem "jruby-openssl"
 
 group :development, :test do
   gem "foreman"
